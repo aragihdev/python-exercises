@@ -1,8 +1,9 @@
 from statistics import median
-
-print("Calculador de média 5 números")
 somanotas = 0
 quantidade = 5
+
+print(f"Calculador de média {quantidade} números")
+
 
 for i in range(quantidade):
     nota = float(input(f"Digite a {i+1} nota:"))
