@@ -14,21 +14,21 @@ while gameRunning == 1:
         SuaVez = 1
         while SuaVez == 1:
             while True:
-                user1Linha = int(input("Em qual linha deseja fazer o X? (0,1,2) "))
-                if user1Linha < 3 and user1Linha >= 0:
+                user1Linha = int(input("Em qual linha deseja fazer o X? (1,2,3) "))
+                if user1Linha < 4 and user1Linha >= 1:
                     break
                 else:
                     print("Número inválido")
             while True:
-                user1Coluna = int(input("Em qual coluna deseja fazer o X? (0,1,2) "))
-                if user1Coluna < 3 and user1Coluna >= 0:
+                user1Coluna = int(input("Em qual coluna deseja fazer o X? (1,2,3) "))
+                if user1Coluna < 4 and user1Coluna >= 1:
                     break
                 else:
                     print("Número inválido")
-            if plano[user1Linha][user1Coluna] == "X" or plano[user1Linha][user1Coluna] == "O":
+            if plano[user1Linha -1][user1Coluna -1] == "X" or plano[user1Linha -1][user1Coluna -1] == "O":
                 print("Posição inválida, tente novamente")
             else:
-                plano[user1Linha][user1Coluna] = "X"
+                plano[user1Linha -1][user1Coluna -1] = "X"
                 break
                 SuaVez = 0
         jogoDaVelha()
@@ -58,21 +58,21 @@ while gameRunning == 1:
         SuaVez = 1
         while SuaVez == 1:
             while True:
-                user2Linha = int(input("Em qual linha deseja fazer o O? (0,1,2) "))
-                if user2Linha < 3 and user2Linha >= 0:
+                user2Linha = int(input("Em qual linha deseja fazer o O? (1,2,3) "))
+                if user2Linha < 4 and user2Linha >= 1:
                     break
                 else:
                     print("Número inválido")
             while True:
-                user2Coluna = int(input("Em qual coluna deseja fazer o O? (0,1,2) "))
-                if user2Coluna < 3 and user2Coluna >= 0:
+                user2Coluna = int(input("Em qual coluna deseja fazer o O? (1,2,3) "))
+                if user2Coluna < 4 and user2Coluna >= 1:
                     break
                 else:
                     print("Número inválido")
-            if plano[user2Linha][user2Coluna] == "X" or plano[user2Linha][user2Coluna] == "O":
+            if plano[user2Linha -1][user2Coluna -1] == "X" or plano[user2Linha -1][user2Coluna -1] == "O":
                 print("Posição inválida, tente novamente")
             else:
-                plano[user2Linha][user2Coluna] = "O"
+                plano[user2Linha -1][user2Coluna -1] = "O"
                 break
                 SuaVez = 0
         jogoDaVelha()
