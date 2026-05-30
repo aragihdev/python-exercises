@@ -8,6 +8,7 @@ plano = [
     ["-", "-", "-"]
 ]
 jogoDaVelha()
+timesPlayed = 0
 gameRunning = 1
 while gameRunning == 1:
     for i in range(0,9):
@@ -32,6 +33,7 @@ while gameRunning == 1:
                 break
                 SuaVez = 0
         jogoDaVelha()
+        timesPlayed += 1
         # horizontal
         if plano[0][0] == plano[0][1] == plano[0][2] and plano[0][0] != "-":
             gameRunning = 0
@@ -52,7 +54,7 @@ while gameRunning == 1:
         if plano[0][2] == plano[1][1] == plano[2][0] and plano[0][2] != "-":
             gameRunning = 0
         # vitoria
-        if gameRunning == 0:
+        if gameRunning == 0 or timesPlayed == 9:
             print("Jogo finalizado.")
             break
         SuaVez = 1
@@ -76,6 +78,7 @@ while gameRunning == 1:
                 break
                 SuaVez = 0
         jogoDaVelha()
+        timesPlayed += 1
         # horizontal
         if plano[0][0] == plano[0][1] == plano[0][2] and plano[0][0] != "-":
             gameRunning = 0
@@ -96,6 +99,6 @@ while gameRunning == 1:
         if plano[0][2] == plano[1][1] == plano[2][0] and plano[0][2] != "-":
             gameRunning = 0
         # vitoria
-        if gameRunning == 0:
+        if gameRunning == 0 or timesPlayed == 9:
             print("Jogo finalizado.")
             break
